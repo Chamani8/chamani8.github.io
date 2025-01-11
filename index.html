@@ -10,6 +10,7 @@
             font-family: Arial, sans-serif;
             line-height: 1.6;
             margin: 20px;
+	    position: relative;
         }
         h1 {
             color: #333;
@@ -20,13 +21,31 @@
         p {
             color: #777;
         }
+
+        /* Image styling for the top-left corner */
+        .top-left-img {
+            position: absolute;
+            top: 10px;  /* Adjust distance from top of the page */
+            left: 10px; /* Adjust distance from left side of the page */
+            width: 150px;  /* Set the width of the image */
+            height: 150px;  /* Maintain the aspect ratio */
+            object-fit: cover;
+        }
     </style>
 </head>
 <body>
 
+    <!-- Image in the top-left corner -->
+    <img src="images/Picture2.jpg" alt="Logo" class="top-left-img">
+
     <h1>Chamani M. Gunasekera</h1>
     <h2>Research Interest</h2>
     <p>understanding the underlying physics (from cosmic chemical evolution to details of radiative transfer) of hot gaseous environments from optical to X-ray. I study the chemical evolution, the detail of radiative transport, and the microphysical processes in astrophysical gases. I am a collaborator of the Cloudy, a spectral synthesis software that simulates conditions in gaseous nebulae.</p>
+
+    <h2>Contact and Useful Links</h2>
+    <p>cgunasekera@stsci.edu</p>
+    <a href="https://orcid.org/0000-0002-4634-5966" class="clickable-url" target="_blank">ORCID</a>
+    <a href="https://gitlab.nublado.org/cloudy/cloudy/-/wikis/home" class="clickable-url" target="_blank">Cloudy Wikis</a>
 
 </body>
 </html>
