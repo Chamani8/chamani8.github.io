@@ -11,10 +11,27 @@
             line-height: 1.6;
             margin: 20px;
 	    position: relative;
-            
+            /* Set the background image */
+            background-image: url('images/pexels-felixmittermeier-956981.jpg');  /* Replace with your image URL */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
         }
+
+        /* Add a semi-transparent overlay */
+        .overlay {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0.65); /* Black color with 65% transparency */
+          pointer-events: none; /* Prevent the overlay from blocking clicks */
+        }
+
         h1 {
-            color: #333;
+            color: white;
+            weight: bold;
         }
         h2 {
             color: #555;
@@ -37,7 +54,7 @@
 <body>
 
     <!-- Image in the top-left corner -->
-    <img src="images/Picture2.jpg" alt="Logo" class="top-left-img">
+    <img src="images/Picture2.jpg" alt="Logo" class="right-img">
 
     <h1>Dr. Chamani M. Gunasekera</h1>
     <p>I am an astrophycist, currently working as a postdoctoral researcher at the Space Telescope Science Institute, which I joined in May 2024. I received my PhD from the University of Kentucky in December 2023.</p>
