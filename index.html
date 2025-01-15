@@ -4,44 +4,91 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Chamani Gunasekera</title>
+    <title>Chamani Gunasekera - Professional Website</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 20px;
-	    position: relative;
-            /* Set the background image */
-            background-image: url('images/HST_ISM.png');  /* Replace with your image URL */
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        /* Navbar Style */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #333;
+            padding: 10px;
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .navbar ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar li {
+            margin: 0 20px;
+        }
+
+        .navbar a {
+            color: #d3d3d3; /* Light grey color */
+            text-decoration: none;
+            padding: 10px;
+            display: block;
+        }
+
+        .navbar a:hover {
+            background-color: #555;
+            color: #fff; /* Change text color to white on hover */
+            border-radius: 5px;
+        }
+
+        .navbar .active {
+            background-color: #f56a00;
+            color: white; /* Ensure active link has white text */
+            border-radius: 5px;
+        }
+
+        /* Section Style */
+        .section {
+            height: 100vh;
+            padding: 40px;
+            transition: background-color 0.3s ease;
+            color: #fff;
+        }
+
+        #section1 {
+            background-image: url('images/HST_ISM.png'); /* Replace with your own image URL */
             background-size: cover;
             background-position: center;
-            background-attachment: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
         }
 
-        /* Add a semi-transparent overlay */
-        .overlay {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          background: rgba(0, 0, 0, 0.95); /* Black color with 65% transparency */
-          pointer-events: none; /* Prevent the overlay from blocking clicks */
-        }
-
-        h1 {
+        #section1 h1 {
             color: white;
             font-weight: bold;
         }
-        h2 {
+        #section1 h2 {
             color: lightgrey;
         }
-        p {
+        #section1 p {
             color: lightgrey;
         }
 
         /* Image styling for the top-left corner */
-        .right-img {
+        #section1 .right-img {
             float: right;  /* Float the image to the right */
             margin-left: 20px;  /* Adds space between the image and the text */
             margin-bottom: 10px;  /* Adds space below the image */
@@ -49,41 +96,115 @@
             height: auto;  /* Maintain aspect ratio */
             object-fit: cover;
         }
-        a {
-            color: #A9A9A9; /* Light grey color */
-            text-decoration: none; /* Remove underline */
-         }
 
-       a:hover {
-            color: #D3D3D3; /* Lighter grey color on hover */
-       }
+        /* Sections 2, 3, and 4 with black background */
+        .section:nth-child(n+2) {
+            background-color: black;
+            color: white;
+        }
 
-       a:visited {
-            color: #B0B0B0; /* Slightly different color for visited links */
-       }
+        .section h2 {
+            font-size: 2.5rem;
+        }
 
-       a:active {
-            color: #808080; /* Darker grey color when the link is clicked */
-       }
+        .section p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+
+        /* Add some spacing at the top to avoid content being hidden behind navbar */
+        .content {
+            padding-top: 60px;
+        }
     </style>
 </head>
 <body>
 
-    <!-- Image in the top-left corner -->
-    <img src="images/Picture2.jpg" alt="Logo" class="right-img">
+    <!-- Navbar -->
+    <div class="navbar">
+        <ul>
+            <li><a href="#" class="tab active" data-tab="section1">Tab 1</a></li>
+            <li><a href="#" class="tab" data-tab="section2">Tab 2</a></li>
+            <li><a href="#" class="tab" data-tab="section3">Tab 3</a></li>
+            <li><a href="#" class="tab" data-tab="section4">Tab 4</a></li>
+        </ul>
+    </div>
 
-    <h1>Dr. Chamani M. Gunasekera</h1>
-    <p>I am an astrophycist, currently working as a postdoctoral researcher at the Space Telescope Science Institute, which I joined in May 2024. I received my PhD from the University of Kentucky in December 2023.</p>
+    <!-- Content Sections -->
+    <div class="content">
+        <div id="section1" class="section">
+            <div class="section-content">
+                <h1>Dr. Chamani M. Gunasekera</h1>
+                <p>I am an astrophycist, currently working as a postdoctoral researcher at the Space Telescope Science Institute, which I joined in May 2024. I received my PhD from the University of Kentucky in December 2023.</p>
+                <p>My primary research goal is to understand the underlying physics (from cosmic chemical evolution to details of radiative transfer) of hot gaseous environments from optical to X-ray. I study the chemical evolution, the details of radiative transport, and the microphysical processes in astrophysical gases. I am a collaborator of the CLOUDY, a spectral synthesis software that simulates conditions in gaseous nebulae. I work closely with Gary J. Ferland and Peter van Hoof. My research at STScI focuses on understanding dust extinction in collaboration with Karl D. Gordon and Marjorie Decleir.</p>
+            </div>
+            <!-- Image positioned to the top right -->
+            <img src="images/Picture2.jpg" alt="Profile picture" class="right-img">
+        </div>
+        <div id="section2" class="section">
+            <h2>Research</h2>
+            <p>TBA.</p>
+        </div>
+        <div id="section3" class="section">
+            <h2>Publications</h2>
+            <p>TBA.</p>
+        </div>
+        <div id="section4" class="section">
+            <h2>Contact and Useful Links</h2>
+            <p>cgunasekera@stsci.edu</p>
+            <p>ADS Library: <a href="https://ui.adsabs.harvard.edu/public-libraries/jqXibSA5S-uc6YAIlLlaRg" class="clickable-url" target="_blank">https://ui.adsabs.harvard.edu/public-libraries/jqXibSA5S-uc6YAIlLlaRg</a></p>
+            <p>ORCID: <a href="https://orcid.org/0000-0002-4634-5966" class="clickable-url" target="_blank">0000-0002-4634-5966</a></p>
+            <p>Cloudy: <a href="https://gitlab.nublado.org/cloudy/cloudy/-/wikis/home" class="clickable-url" target="_blank">gitlab.nublado.org</a></p>
+            <p>Chianti to Chianti converter: <a href="https://gitlab.nublado.org/cloudy/arrack" class="clickable-url" target="_blank">gitlab.nublado.org/cloudy/arrack</a></p>
+        </div>
+    </div>
+    <!-- JavaScript to switch tabs as you scroll -->
+    <script>
+        // Get all the tabs and sections
+        const tabs = document.querySelectorAll('.tab');
+        const sections = document.querySelectorAll('.section');
 
-    <p>My primary research goal is to understand the underlying physics (from cosmic chemical evolution to details of radiative transfer) of hot gaseous environments from optical to X-ray. I study the chemical evolution, the details of radiative transport, and the microphysical processes in astrophysical gases. I am a collaborator of the Cloudy, a spectral synthesis software that simulates conditions in gaseous nebulae. I work closely with Gary J. Ferland and Peter van Hoof. My research at STScI focuses on understanding dust extinction in collaboration with Karl D. Gordon and Marjorie Decleir.</p>
+        // Function to update the active tab based on the scroll position
+        function updateActiveTab() {
+            let currentSection = null;
+            const scrollPosition = window.scrollY + 100; // Adjust offset for more accurate switching
 
-    <h2>Contact and Useful Links</h2>
-    <p>cgunasekera@stsci.edu</p>
-    <p>ADS Library: <a href="https://ui.adsabs.harvard.edu/public-libraries/jqXibSA5S-uc6YAIlLlaRg" class="clickable-url" target="_blank">https://ui.adsabs.harvard.edu/public-libraries/jqXibSA5S-uc6YAIlLlaRg</a></p>
-    <p>ORCID: <a href="https://orcid.org/0000-0002-4634-5966" class="clickable-url" target="_blank">0000-0002-4634-5966</a></p>
-    <p>Cloudy: <a href="https://gitlab.nublado.org/cloudy/cloudy/-/wikis/home" class="clickable-url" target="_blank">gitlab.nublado.org</a></p>
-    <p>Chianti to Chianti converter: <a href="https://gitlab.nublado.org/cloudy/arrack" class="clickable-url" target="_blank">gitlab.nublado.org/cloudy/arrack</a></p>
+            // Loop through all sections to find which one is currently in view
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionBottom = sectionTop + section.offsetHeight;
+
+                if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+                    currentSection = section;
+                }
+            });
+
+            // Update the active tab
+            if (currentSection) {
+                const currentTab = document.querySelector(`.tab[data-tab="${currentSection.id}"]`);
+                tabs.forEach(tab => tab.classList.remove('active'));
+                currentTab.classList.add('active');
+            }
+        }
+
+        // Add scroll event listener
+        window.addEventListener('scroll', updateActiveTab);
+
+        // Add click event listener to tabs for manual tab switching
+        tabs.forEach(tab => {
+            tab.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetSection = document.getElementById(tab.getAttribute('data-tab'));
+                window.scrollTo({
+                    top: targetSection.offsetTop,
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Initialize active tab on page load
+        updateActiveTab();
+    </script>
 
 </body>
 </html>
-
