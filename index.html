@@ -33,25 +33,57 @@
         </div>
         <div id="section2" class="section">
             <h1>Research</h1>
-            <h2>My thesis work:</h2>
-            <figure class="image-wrap">
-                <img src="images/Perseus_Ngrd_Jratio_wM1.png" alt="bpt_depletion" width="400">
-            </figure>
-            <p></p>
-            <p><strong>Resolving Hydrogenic Lyman Doublets:</strong>  With the launch of nextgeneration telescopes such as XRISM, Euclid, Athena and many more, it is an ideal to time be a data and computational scientist in astronomy. The consequent challenges with the advent of these missions will be in building a data pipeline for the massive volume of data, and in modeling such high-resolution data. Despite the advances that have been made to the CLOUDY code in the past years, before this project CLOUDY had not taken into account the H-like exhibiting level splitting due to quantum fine-structure interactions (Bethe and Salpeter, 1957). This project improves the microphysical calculations conducted by CLOUDY by taking fine-structure splitting of the H-like ions into consideration. Such calculations alter predictions for the physical state of the gas by producing more accurate line strength predictions of the two Ly&alpha; components. This work will be the primary component of the 2025 release of CLOUDY.</p>
-            <p> </p>
-            <p><strong>Keeping up with an evolving database:</strong>  Atomic and molecular data are required for the microphysical calculations conducted to simulate astrophysical plasmas. CHIANTI 7 is one such database used by the CLOUDY code, containing important electron excitation data required for the microphysical calculations. As the structure of the CHIANTI data has evolved with each new version, the latest CHIANTI 10 version has become incompatible with CLOUDY.</p>
-            <p class="second">I recast data from the latest version of CHIANTI to a common format used by CLOUDY and other codes, using a Python script I developed. This solution allows CLOUDY to keep up with future changes to the CHIANTI database with no changes to its source code, (the script is open-access at https://gitlab.nublado.org/cloudy/arrack). This new reformatted database containing the updated CHIANTI 10 data was released with C23, providing improved line wavelengths and spectral line intensities.</p>
-            <p> </p>
-            <p><strong>Selective Grain Depletions in H II Regions:</strong>  Atomic species in the ISM transition out of their gas phase mainly by condensing onto dust grains, a.k.a grain depletion. Although the phenomenon of grain depletions has long been known and studied, the physics of these depletions is still ambiguous. However, an accurate representation of the chemical evolution of the ISM is paramount to many other galactic processes including the observed spectra, stellar formation, and galactic evolution. I incorporated the Jenkins (2009) formalism into the widely used CLOUDY code to obtain a self-consistent set of dust depletions for the various elements.</p>
-            <figure class="image-wrap">
-                <img src="images/3bpt_fstarr.png" alt="bpt_depletion" width="900">
-            </figure>
-            <p class="second">I show that the depletion strength (F∗) significantly affects the intensity of strong emission lines and the thermal balance of the ionized gas. I also found that varying metallicity, ionization parameter, and depletion strength in H II regions produced significant yet degenerate variances in the emission-line spectra. Small changes in the grain abundance can be misinterpreted as changes in the metallicity. The spectral predictions obtained above were compared to a large sample of observed extragalactic star-forming regions obtained by the MaNGA (Mapping Nearby Galaxies at Apache Point Observatory) survey (Bundy et al., 2015). I concluded that the best fit for this sample of H II regions, was produced by using a depletion strength of F∗ ∼ 0.5 and adopting the N/O abundance ratio given in Schaefer et al. (2020). This work is part of the C23.00 release, and will have a broad impact on future investigations using CLOUDY to study observations.</p>
-            <p> </p>
-            <p><strong>Ly&alpha; optical depth and Ly&alpha; Escape & Destruction Probability:</strong>  Resonance lines of abundant atoms have large optical depths in nebulae. So calculation of the expected line strengths for such lines must take into account scattering and absorption. The escape probability (&beta;) approximation is a convenient way to treat the effects of radiative trapping, which appreciably diminishes the photon flux in these lines (Netzer et al., 1985). As CLOUDY’s uses grew and resonance lines have been split into the fine-structure components (Ferland et al., 2017; Chatzikos et al., 2023), the code required a conversion from line-center to mean Ly&alpha; optical depth. I found that this conversion had picked up an erroneous factor of &pi; in CLOUDY’s calculation of Ly&alpha; escape and destruction probability.</p>
-            <p class="second">This CLOUDY update has now been published as the C23.01 sub-release, succeeding C23.00 (Chatzikos et al., 2023). I found that the largest changes, as a result of this update, occurred for dusty clouds where H Ly&alpha; destruction is important. Since H Ly&alpha; is often the strongest line in the spectrum, significant changes in its physics will have consequences on other physical parameters.</p>
+        
+            <!-- Card Grid -->
+            <div class="research-grid">
+        
+                <!-- Card 1 -->
+                <div class="research-card" onclick="showDetail('detail1')">
+                    <img src="images/Perseus_Ngrd_Jratio_wM1.png" alt="Hydrogenic Lyman Doublets">
+                    <h3>Hydrogenic Lyman Doublets</h3>
+                </div>
+        
+                <!-- Card 2 -->
+                <div class="research-card" onclick="showDetail('detail2')">
+                    <img src="images/sample_chianti.png" alt="CHIANTI Database">
+                    <h3>CHIANTI Database Integration</h3>
+                </div>
+        
+                <!-- Card 3 -->
+                <div class="research-card" onclick="showDetail('detail3')">
+                    <img src="images/3bpt_fstarr.png" alt="Grain Depletions">
+                    <h3>Grain Depletions in H II Regions</h3>
+                </div>
+        
+                <!-- Card 4 -->
+                <div class="research-card" onclick="showDetail('detail4')">
+                    <img src="images/sample_lya.png" alt="Lyα Escape">
+                    <h3>Ly&alpha; Escape and Destruction</h3>
+                </div>
+            </div>
+        
+            <!-- Detailed Content Sections -->
+            <div id="detail1" class="research-detail hidden">
+                <h2>Hydrogenic Lyman Doublets</h2>
+                <p>With next-gen telescopes like XRISM and Athena, high-resolution modeling is vital. I updated CLOUDY to include quantum fine-structure interactions in H-like ions, improving line predictions and modeling accuracy. This will be in the 2025 CLOUDY release.</p>
+            </div>
+        
+            <div id="detail2" class="research-detail hidden">
+                <h2>CHIANTI Database Integration</h2>
+                <p>I developed a Python converter to reformat CHIANTI 10 data into a format readable by CLOUDY. This makes CLOUDY compatible with future CHIANTI updates without changing its source code. Script: <a href="https://gitlab.nublado.org/cloudy/arrack" target="_blank">Arrack on GitLab</a></p>
+            </div>
+        
+            <div id="detail3" class="research-detail hidden">
+                <h2>Grain Depletions in H II Regions</h2>
+                <p>I incorporated Jenkins (2009) depletion models into CLOUDY, demonstrating how grain depletion strength (F*) impacts emission-line spectra. This work helped interpret MaNGA data and was released in CLOUDY C23.00.</p>
+            </div>
+        
+            <div id="detail4" class="research-detail hidden">
+                <h2>Ly&alpha; Escape and Destruction</h2>
+                <p>I corrected an error in CLOUDY's treatment of Ly&alpha; optical depth and escape probability (erroneous π factor). This improved predictions for dusty cloud models and was released in C23.01.</p>
+            </div>
         </div>
+
         <div id="section3" class="section">
             <h2>Selected Publications</h2>
             <p><a href="https://ui.adsabs.harvard.edu/abs/2024arXiv241201606G/abstract" class="no-underline"  target="_blank">Cloudy and the High-Resolution Microcalorimeter Revolution: Optical, UV, and X-ray Spectra of One-electron Systems</a></p>
