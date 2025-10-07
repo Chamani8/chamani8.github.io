@@ -78,15 +78,27 @@ body {
 
 /* Image styling for the top-left corner */
 #section1 .right-img {
-    float: right;  /* Float the image to the right */
+    float: right;
     margin-top: 60px;
-    margin-left: 20px;  /* Adds space between the image and the text */
-    margin-bottom: 10px;  /* Adds space below the image */
-    width: 270px;  /* Set the width of the image */
-    height: 270px;  /* Maintain aspect ratio */
+    margin-left: 20px;
+    margin-bottom: 10px;
+    width: 270px;
+    height: auto;
     object-fit: contain;
     border-radius: 8px;
 }
+
+/* Responsive fix for small screens */
+@media (max-width: 768px) {
+    .right-img {
+        float: none;
+        display: block;
+        margin: 20px auto;
+        width: 80%;
+        max-width: 270px;
+    }
+}
+
 
 /* Sections 2, 3, and 4 with black background */
 .section:nth-child(2) {
@@ -242,4 +254,19 @@ body {
 .research-card .card-title {
     text-decoration: none;
     color: lightgrey;
+}
+
+.research-image-float {
+    width: 300px;
+    float: right;
+    margin: 0 0 20px 20px;
+    border-radius: 10px;
+}
+
+@media (max-width: 600px) {
+    .research-image-float {
+        float: none;
+        display: block;
+        margin: 0 auto 20px auto;
+    }
 }
