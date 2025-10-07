@@ -257,9 +257,9 @@ body {
 }
 
 .research-image-float {
-    width: 300px;
-    float: right;
-    margin: 0 0 20px 20px;
+    width: 400px;
+    float: left;
+    margin: 0 20px 20px 0;
     border-radius: 10px;
 }
 
