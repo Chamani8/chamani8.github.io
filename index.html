@@ -33,55 +33,34 @@
         </div>
         <div id="section2" class="section">
             <h1>Research</h1>
-        
-            <!-- Card Grid -->
+
+            <!-- Grid of Linked Cards -->
             <div class="research-grid">
-        
+
                 <!-- Card 1 -->
-                <div class="research-card" onclick="showDetail('detail1')">
+                <a href="research-npsplit.html" class="research-card">
                     <img src="images/Perseus_Ngrd_Jratio_wM1.png" alt="Hydrogenic Lyman Doublets">
                     <h3>Hydrogenic Lyman Doublets</h3>
-                </div>
-        
+                </a>
+
                 <!-- Card 2 -->
-                <div class="research-card" onclick="showDetail('detail2')">
+                <a href="research-chianti.html" class="research-card">
                     <img src="images/sample_chianti.png" alt="CHIANTI Database">
-                    <h3>CHIANTI Database Integration</h3>
-                </div>
-        
+                    <h3>CLOUDY's CHIANTI Database</h3>
+                </a>
+
                 <!-- Card 3 -->
-                <div class="research-card" onclick="showDetail('detail3')">
+                <a href="research-depletion.html" class="research-card">
                     <img src="images/3bpt_fstarr.png" alt="Grain Depletions">
                     <h3>Grain Depletions in H II Regions</h3>
-                </div>
-        
+                </a>
+
                 <!-- Card 4 -->
-                <div class="research-card" onclick="showDetail('detail4')">
+                <a href="research-c2301.html" class="research-card">
                     <img src="images/sample_lya.png" alt="Lyα Escape">
                     <h3>Ly&alpha; Escape and Destruction</h3>
-                </div>
-            </div>
-        
-            <!-- Detailed Content Sections -->
-            <div id="detail1" class="research-detail hidden">
-                <h2>Hydrogenic Lyman Doublets</h2>
-                <p>With next-gen telescopes like XRISM and Athena, high-resolution modeling is vital. I updated CLOUDY to include quantum fine-structure interactions in H-like ions, improving line predictions and modeling accuracy. This will be in the 2025 CLOUDY release.</p>
-            </div>
-        
-            <div id="detail2" class="research-detail hidden">
-                <h2>CHIANTI Database Integration</h2>
-                <p>I developed a Python converter to reformat CHIANTI 10 data into a format readable by CLOUDY. This makes CLOUDY compatible with future CHIANTI updates without changing its source code. Script: <a href="https://gitlab.nublado.org/cloudy/arrack" target="_blank">Arrack on GitLab</a></p>
-            </div>
-        
-            <div id="detail3" class="research-detail hidden">
-                <h2>Grain Depletions in H II Regions</h2>
-                <p>I incorporated Jenkins (2009) depletion models into CLOUDY, demonstrating how grain depletion strength (F*) impacts emission-line spectra. This work helped interpret MaNGA data and was released in CLOUDY C23.00.</p>
-            </div>
-        
-            <div id="detail4" class="research-detail hidden">
-                <h2>Ly&alpha; Escape and Destruction</h2>
-                <p>I corrected an error in CLOUDY's treatment of Ly&alpha; optical depth and escape probability (erroneous π factor). This improved predictions for dusty cloud models and was released in C23.01.</p>
-            </div>
+                </a>
+
         </div>
 
         <div id="section3" class="section">
