@@ -79,26 +79,26 @@ body {
 /* Image styling for the top-left corner */
 #section1 .right-img {
     float: right;
-    margin-top: 20px;
+    margin-top: 20px; /* reduce margin-top for higher position */
     margin-left: 20px;
     margin-bottom: 10px;
     width: 270px;
-    height: auto;
+    height: 270px; /* restore fixed height for vertical placement */
     object-fit: contain;
     border-radius: 8px;
 }
 
-/* Responsive fix for small screens */
+/* Responsive override for small screens */
 @media (max-width: 768px) {
-    .right-img {
+    #section1 .right-img {
         float: none;
         display: block;
         margin: 20px auto;
         width: 80%;
         max-width: 270px;
+        height: auto; /* Let it scale naturally */
     }
 }
-
 
 /* Sections 2, 3, and 4 with black background */
 .section:nth-child(2) {
