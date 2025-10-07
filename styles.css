@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: Wulkan Display, Adobe Garamond Pro, Garamond, Baskerville, Baskerville Old Face, Hoefler Text, Times New Roman, serif;
     margin: 0;
     padding: 0;
     background-color: black;
@@ -257,7 +257,7 @@ body {
 }
 
 .research-image-float {
-    width: 400px;
+    width: 200px;
     float: left;
     margin: 0 20px 20px 0;
     border-radius: 10px;
@@ -269,4 +269,13 @@ body {
         display: block;
         margin: 0 auto 20px auto;
     }
+}
+
+.image-wrap {
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    width: 350px;       /* Or any width that works well */
+    height: auto;
+    border-radius: 10px;
 }
