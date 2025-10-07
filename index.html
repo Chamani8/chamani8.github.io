@@ -157,5 +157,21 @@
         updateActiveTab();
     </script>
 
+    <script>
+        function showDetail(id) {
+            // Hide all details first
+            document.querySelectorAll('.research-detail').forEach(detail => {
+                detail.classList.add('hidden');
+            });
+    
+            // Show the selected one
+            const selected = document.getElementById(id);
+            if (selected) {
+                selected.classList.remove('hidden');
+                selected.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    </script>
+
 </body>
 </html>
